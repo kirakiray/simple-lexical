@@ -44,7 +44,6 @@ import {
   // INSERT_IMAGE_COMMAND,
   InsertImageDialog,
 } from "../ImagesPlugin";
-// import {InsertPollDialog} from '../PollPlugin';
 import { InsertTableDialog } from "../TablePlugin";
 
 class ComponentPickerOption extends TypeaheadOption {

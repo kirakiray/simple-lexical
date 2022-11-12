@@ -87,7 +87,6 @@ import {
   // InsertImageDialog,
   InsertImagePayload,
 } from "../ImagesPlugin";
-// import { InsertPollDialog } from "../PollPlugin";
 // import { InsertNewTableDialog, InsertTableDialog } from "../TablePlugin";
 
 const blockTypeToBlockName = {

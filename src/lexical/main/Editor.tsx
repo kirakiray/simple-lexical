@@ -36,7 +36,6 @@ import ClickableLinkPlugin from "./plugins/ClickableLinkPlugin";
 import CodeActionMenuPlugin from "./plugins/CodeActionMenuPlugin";
 import CodeHighlightPlugin from "./plugins/CodeHighlightPlugin";
 import CollapsiblePlugin from "./plugins/CollapsiblePlugin";
-// import CommentPlugin from './plugins/CommentPlugin';
 import ComponentPickerPlugin from "./plugins/ComponentPickerPlugin";
 import DragDropPaste from "./plugins/DragDropPastePlugin";
 import DraggableBlockPlugin from "./plugins/DraggableBlockPlugin";
@@ -54,7 +53,6 @@ import ListMaxIndentLevelPlugin from "./plugins/ListMaxIndentLevelPlugin";
 import MarkdownShortcutPlugin from "./plugins/MarkdownShortcutPlugin";
 import { MaxLengthPlugin } from "./plugins/MaxLengthPlugin";
 import MentionsPlugin from "./plugins/MentionsPlugin";
-// import PollPlugin from './plugins/PollPlugin';
 import SpeechToTextPlugin from "./plugins/SpeechToTextPlugin";
 import TabFocusPlugin from "./plugins/TabFocusPlugin";
 import TableCellActionMenuPlugin from "./plugins/TableActionMenuPlugin";
@@ -62,7 +60,6 @@ import TableCellResizer from "./plugins/TableCellResizer";
 import TableOfContentsPlugin from "./plugins/TableOfContentsPlugin";
 // import {TablePlugin as NewTablePlugin} from './plugins/TablePlugin';
 import ToolbarPlugin from "./plugins/ToolbarPlugin";
-// import TreeViewPlugin from './plugins/TreeViewPlugin';
 import TwitterPlugin from "./plugins/TwitterPlugin";
 import YouTubePlugin from "./plugins/YouTubePlugin";
 // import PlaygroundEditorTheme from "./themes/PlaygroundEditorTheme";
@@ -91,7 +88,6 @@ export default function Editor({
       isCharLimit,
       isCharLimitUtf8,
       isRichText,
-      showTreeView,
       showTableOfContents,
     },
   } = useSettings();
@@ -124,7 +120,7 @@ export default function Editor({
     <>
       {isRichText && editable && <ToolbarPlugin />}
       <div
-        className={`editor-container ${showTreeView ? "tree-view" : ""} ${
+        className={`editor-container ${
           !isRichText ? "plain-text" : ""
         }`}
         ref={scrollRef}
@@ -143,9 +139,6 @@ export default function Editor({
         <SpeechToTextPlugin />
         <AutoLinkPlugin />
         <AutoScrollPlugin scrollRef={scrollRef} />
-        {/* <CommentPlugin
-          providerFactory={isCollab ? createWebsocketProvider : undefined}
-        /> */}
         {isRichText ? (
           <>
             {isCollab ? (
@@ -193,7 +186,6 @@ export default function Editor({
             </NewTablePlugin> */}
             <ImagesPlugin />
             <LinkPlugin />
-            {/* <PollPlugin /> */}
             <TwitterPlugin />
             <YouTubePlugin />
             <FigmaPlugin />
@@ -233,7 +225,6 @@ export default function Editor({
         <div>{showTableOfContents && <TableOfContentsPlugin />}</div>
         {/* <ActionsPlugin isRichText={isRichText} /> */}
       </div>
-      {/* {showTreeView && <TreeViewPlugin />} */}
     </>
   );
 }

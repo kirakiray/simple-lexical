@@ -3,7 +3,7 @@ import Lexical from "./lexical";
 
 function App() {
   const onChange = (e) => {
-    console.log("haha => ", e.toJSON());
+    console.log("onchange => ", e.toJSON());
   };
 
   return (
