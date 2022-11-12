@@ -121,6 +121,7 @@ export default function App({
   editable = true,
   editorState,
   onChange,
+  ...rest
 }: Props): JSX.Element {
   // const {
   //   settings: { isCollab, emptyEditor, measureTypingPerf },
@@ -168,7 +169,7 @@ export default function App({
       <SettingsContext>
         <TableContext>
           <LexicalComposer initialConfig={initialConfig}>
-            <div className="editor-shell">
+            <div className="editor-shell" {...rest}>
               <Editor onChange={onChange} editable={editable} />
             </div>
           </LexicalComposer>

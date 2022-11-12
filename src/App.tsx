@@ -12,7 +12,11 @@ function App() {
       <Lexical onChange={onChange} editorState={teststate} />
       <br />
       <div>read mode:</div>
-      <Lexical editorState={teststate} editable={false} />
+      <Lexical
+        editorState={teststate}
+        editable={false}
+        style={{ width: 600 }}
+      />
     </div>
   );
 }
