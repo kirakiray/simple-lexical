@@ -27,7 +27,7 @@ import { useRef, useState } from "react";
 import { createWebsocketProvider } from "./collaboration";
 import { useSettings } from "./context/SettingsContext";
 import { useSharedHistoryContext } from "./context/SharedHistoryContext";
-import TableCellNodes from "./nodes/TableCellNodes";
+// import TableCellNodes from "./nodes/TableCellNodes";
 // import ActionsPlugin from './plugins/ActionsPlugin';
 import AutocompletePlugin from "./plugins/AutocompletePlugin";
 import AutoEmbedPlugin from "./plugins/AutoEmbedPlugin";
