@@ -28,6 +28,7 @@
     "@types/react-dom": "^18.0.8",
     "@vitejs/plugin-react": "^2.2.0",
     "typescript": "^4.6.4",
+    "typescript-simple": "^8.0.6",
     "vite": "^3.2.3"
   }
 }
