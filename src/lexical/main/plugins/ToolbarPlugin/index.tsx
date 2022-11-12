@@ -956,7 +956,7 @@ export default function ToolbarPlugin(): JSX.Element {
           </DropDown> */}
         </>
       )}
-      <Divider />
+      {/* <Divider /> */}
       <DropDown
         disabled={!isEditable}
         buttonLabel="Align"

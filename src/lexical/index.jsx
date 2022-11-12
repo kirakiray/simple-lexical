@@ -1,8 +1,7 @@
-// import "./main/setupEnv";
 import "./main/index.css";
 
-import Main from "./main/App";
+import Main from "./main";
 
-export default function LexicalEditor() {
-  return <Main />;
+export default function LexicalEditor({ ...rest }) {
+  return <Main {...rest} />;
 }

@@ -20,6 +20,7 @@ import { ListPlugin } from "@lexical/react/LexicalListPlugin";
 import { PlainTextPlugin } from "@lexical/react/LexicalPlainTextPlugin";
 import { RichTextPlugin } from "@lexical/react/LexicalRichTextPlugin";
 import { TablePlugin } from "@lexical/react/LexicalTablePlugin";
+import { OnChangePlugin } from "@lexical/react/LexicalOnChangePlugin";
 import * as React from "react";
 import { useRef, useState } from "react";
 
@@ -64,7 +65,7 @@ import ToolbarPlugin from "./plugins/ToolbarPlugin";
 // import TreeViewPlugin from './plugins/TreeViewPlugin';
 import TwitterPlugin from "./plugins/TwitterPlugin";
 import YouTubePlugin from "./plugins/YouTubePlugin";
-import PlaygroundEditorTheme from "./themes/PlaygroundEditorTheme";
+// import PlaygroundEditorTheme from "./themes/PlaygroundEditorTheme";
 import ContentEditable from "./ui/ContentEditable";
 import Placeholder from "./ui/Placeholder";
 
@@ -72,7 +73,15 @@ const skipCollaborationInit =
   // @ts-ignore
   window.parent != null && window.parent.frames.right === window;
 
-export default function Editor(): JSX.Element {
+interface Props {
+  editable: boolean;
+  onChange: () => void;
+}
+
+export default function Editor({
+  editable,
+  onChange = () => {},
+}: Props): JSX.Element {
   const { historyState } = useSharedHistoryContext();
   const {
     settings: {
@@ -102,18 +111,18 @@ export default function Editor(): JSX.Element {
     }
   };
 
-  const cellEditorConfig = {
-    namespace: "Playground",
-    nodes: [...TableCellNodes],
-    onError: (error: Error) => {
-      throw error;
-    },
-    theme: PlaygroundEditorTheme,
-  };
+  // const cellEditorConfig = {
+  //   namespace: "Playground",
+  //   nodes: [...TableCellNodes],
+  //   onError: (error: Error) => {
+  //     throw error;
+  //   },
+  //   theme: PlaygroundEditorTheme,
+  // };
 
   return (
     <>
-      {isRichText && <ToolbarPlugin />}
+      {isRichText && editable && <ToolbarPlugin />}
       <div
         className={`editor-container ${showTreeView ? "tree-view" : ""} ${
           !isRichText ? "plain-text" : ""
@@ -194,7 +203,8 @@ export default function Editor(): JSX.Element {
             <ExcalidrawPlugin />
             <TabFocusPlugin />
             <CollapsiblePlugin />
-            {floatingAnchorElem && (
+            <OnChangePlugin onChange={onChange} />
+            {floatingAnchorElem && editable && (
               <>
                 <DraggableBlockPlugin anchorElem={floatingAnchorElem} />
                 <CodeActionMenuPlugin anchorElem={floatingAnchorElem} />

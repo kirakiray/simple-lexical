@@ -83,7 +83,7 @@ header h1 {
   position: relative;
   outline: 0;
   overflow: auto;
-  resize: vertical;
+  /* resize: vertical; */
 }
 
 .editor {
