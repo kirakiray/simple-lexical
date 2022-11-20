@@ -6,18 +6,19 @@ module.exports = {
   env: {
     es2022: true,
   },
-  settings: {
-    "import/resolver": {
-      node: {
-        extensions: [".js", ".jsx", ".ts", ".tsx"],
-      },
-    },
-  },
+  // settings: {
+  //   "import/resolver": {
+  //     node: {
+  //       extensions: [".js", ".jsx", ".ts", ".tsx"],
+  //     },
+  //   },
+  // },
   globals: {},
   overrides: [
     {
       files: ["packages/**.js", "packages/**.jsx"],
       parser: "babel-eslint",
+      extends: ["standard"],
       rules: {
         "react-hooks/exhaustive-deps": "off",
       },

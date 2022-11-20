@@ -2,8 +2,21 @@ lockfileVersion: 5.4
 
 specifiers:
   '@excalidraw/excalidraw': 0.11.0
+  '@lexical/clipboard': ^0.6.0
+  '@lexical/code': ^0.6.0
   '@lexical/file': ^0.6.0
+  '@lexical/hashtag': ^0.6.0
+  '@lexical/html': ^0.6.0
+  '@lexical/link': ^0.6.0
+  '@lexical/list': ^0.6.0
+  '@lexical/mark': ^0.6.0
+  '@lexical/markdown': ^0.6.0
+  '@lexical/overflow': ^0.6.0
   '@lexical/react': ^0.6.0
+  '@lexical/rich-text': ^0.6.0
+  '@lexical/selection': ^0.6.0
+  '@lexical/table': ^0.6.0
+  '@lexical/utils': ^0.6.0
   '@lexical/yjs': ^0.6.0
   '@types/react': ^18.0.24
   '@types/react-dom': ^18.0.8
@@ -24,8 +37,21 @@ specifiers:
 
 dependencies:
   '@excalidraw/excalidraw': 0.11.0_biqbaboplfbrettd7655fr4n2y
+  '@lexical/clipboard': 0.6.0_lexical@0.6.0
+  '@lexical/code': 0.6.0_lexical@0.6.0
   '@lexical/file': 0.6.0_lexical@0.6.0
+  '@lexical/hashtag': 0.6.0_lexical@0.6.0
+  '@lexical/html': 0.6.0_lexical@0.6.0
+  '@lexical/link': 0.6.0_lexical@0.6.0
+  '@lexical/list': 0.6.0_lexical@0.6.0
+  '@lexical/mark': 0.6.0_lexical@0.6.0
+  '@lexical/markdown': 0.6.0_gvesoywphp56o6nob3ghyhbcia
+  '@lexical/overflow': 0.6.0_lexical@0.6.0
   '@lexical/react': 0.6.0_cilaxoqo2yj75bquwqxzxg6lf4
+  '@lexical/rich-text': 0.6.0_b5kwflnumeldwqibcponufodxe
+  '@lexical/selection': 0.6.0_lexical@0.6.0
+  '@lexical/table': 0.6.0_lexical@0.6.0
+  '@lexical/utils': 0.6.0_lexical@0.6.0
   '@lexical/yjs': 0.6.0_lexical@0.6.0+yjs@13.5.42
   katex: 0.15.6
   lexical: 0.6.0

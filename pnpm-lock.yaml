@@ -4,11 +4,13 @@ specifiers:
   '@typescript-eslint/parser': ^5.43.0
   babel-eslint: ^10.1.0
   eslint: ^8.28.0
+  eslint-plugin-standard: ^5.0.0
 
 devDependencies:
   '@typescript-eslint/parser': 5.43.0_eslint@8.28.0
   babel-eslint: 10.1.0_eslint@8.28.0
   eslint: 8.28.0
+  eslint-plugin-standard: 5.0.0_eslint@8.28.0
 
 packages:
 
@@ -447,6 +449,15 @@ packages:
   /escape-string-regexp/4.0.0:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
+    dev: true
+
+  /eslint-plugin-standard/5.0.0_eslint@8.28.0:
+    resolution: {integrity: sha512-eSIXPc9wBM4BrniMzJRBm2uoVuXz2EPa+NXPk2+itrVt+r5SbKFERx/IgrK/HmfjddyKVz2f+j+7gBRvu19xLg==}
+    deprecated: 'standard 16.0.0 and eslint-config-standard 16.0.0 no longer require the eslint-plugin-standard package. You can remove it from your dependencies with ''npm rm eslint-plugin-standard''. More info here: https://github.com/standard/standard/issues/1316'
+    peerDependencies:
+      eslint: '>=5.0.0'
+    dependencies:
+      eslint: 8.28.0
     dev: true
 
   /eslint-scope/7.1.1:
