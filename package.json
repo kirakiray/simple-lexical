@@ -1,34 +1,16 @@
 {
-  "name": "vite-project",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "simple-lexical",
+  "version": "0.1.0",
+  "description": "",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "@excalidraw/excalidraw": "0.11.0",
-    "@lexical/file": "^0.6.0",
-    "@lexical/react": "^0.6.0",
-    "katex": "^0.15.2",
-    "lexical": "^0.6.0",
-    "lodash-es": "^4.17.21",
-    "prettier": "^2.3.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-error-boundary": "^3.1.4",
-    "roughjs": "^4.5.2",
-    "y-websocket": ">=1.3.x",
-    "yjs": ">=13.5.22"
-  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
   "devDependencies": {
-    "@types/react": "^18.0.24",
-    "@types/react-dom": "^18.0.8",
-    "@vitejs/plugin-react": "^2.2.0",
-    "typescript": "^4.6.4",
-    "typescript-simple": "^8.0.6",
-    "vite": "^3.2.3"
+    "@typescript-eslint/parser": "^5.43.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.28.0"
   }
 }
