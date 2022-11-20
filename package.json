@@ -3,15 +3,25 @@
   "version": "0.1.0",
   "description": "",
   "scripts": {
+    "lint": "eslint packages --ext .mjs,.js,.jsx,.ts,.tsx",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "YAO",
   "license": "MIT",
   "devDependencies": {
+    "@arcblock/eslint-config": "^0.2.3",
     "@typescript-eslint/parser": "^5.43.0",
-    "babel-eslint": "^10.1.0",
     "eslint": "^8.28.0",
-    "eslint-plugin-standard": "^5.0.0"
+    "prettier": "^2.7.1"
+  },
+  "lint-staged": {
+    "*.{mjs,js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint"
+    ],
+    "*.{css,less,scss,json,graphql}": [
+      "prettier --write"
+    ]
   }
 }

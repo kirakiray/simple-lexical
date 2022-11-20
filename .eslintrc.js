@@ -6,27 +6,31 @@ module.exports = {
   env: {
     es2022: true,
   },
-  // settings: {
-  //   "import/resolver": {
-  //     node: {
-  //       extensions: [".js", ".jsx", ".ts", ".tsx"],
-  //     },
-  //   },
-  // },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.native.js'],
+      },
+    },
+  },
+  parserOptions: {
+    sourceType: 'module',
+  },
   globals: {},
   overrides: [
     {
-      files: ["packages/**.js", "packages/**.jsx"],
-      parser: "babel-eslint",
-      extends: ["standard"],
+      files: ['packages/**/*.js', 'packages/**/*.jsx'],
+      extends: ['@arcblock/eslint-config'],
       rules: {
-        "react-hooks/exhaustive-deps": "off",
+        'react-hooks/exhaustive-deps': 'off',
       },
     },
     {
-      files: ["packages/**.tsx", "packages/**.ts"],
-      parser: "@typescript-eslint/parser",
-      rules: {},
+      files: ['packages/**/*.ts', 'packages/**/*.tsx'],
+      parser: '@typescript-eslint/parser',
+      rules: {
+        '@typescript-eslint/no-explicit-any': 'off',
+      },
     },
   ],
 };

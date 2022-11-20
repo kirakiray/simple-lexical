@@ -144,7 +144,7 @@ const keyPresses = new Set([
 ]);
 
 type Step = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // eslint-disable-next-line
   value: any;
   count: number;
   name: string;
